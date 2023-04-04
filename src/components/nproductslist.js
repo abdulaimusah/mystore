@@ -39,7 +39,7 @@ const ProductList = ({ products }) => {
   });
 
   return (
-    <div className="flex gap-6 mt-6 flex-wrap">
+    <div className="flex flex-grow gap-6 mt-6 flex-wrap">
       <div className="flex flex-col px-4 md:h-3/5 py-4
       md:sticky md:top-20" >
       <div className="">

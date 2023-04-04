@@ -64,7 +64,7 @@ function App() {
 
   return (
     <Router>
-      <div className={`min-h-screen h-full ${darkMode ? "bg-slate-900 text-white" : "bg-gray-100 text-gray-900"}`}>
+      <div className={`min-h-screen h-full flex flex-col ${darkMode ? "bg-slate-700 text-white" : "bg-white text-gray-900"}`}>
         <Header darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} cartItems={cartItems} />
         <Routes>
           <Route index 

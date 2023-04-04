@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 
 function Header({ handleDarkModeToggle, isDarkMode }) {
   return (
-    <nav className={`sticky top-0 bg-rose-700 shadow-md shadow-slate-100
-     ${isDarkMode ? 'bg-cyan-800' : 'bg-gray-200'} 
-    shadow-sm dark:bg-slate-900  `}>
+    <nav className={`sticky top-0  shadow-md shadow-slate-100 flex-shrink-0
+     ${isDarkMode ? 'bg-cyan-800' : 'bg-cyan-800'} 
+      dark:bg-slate-900  `}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className={`font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>My Ecommerce Site</Link>
+            <Link to="/" className={`font-bold ${isDarkMode ? 'text-white' : 'text-white'}`}>My Ecommerce Site</Link>
           </div>
           <div className="flex items-center">
-            <Link to="/cart" className={`mr-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Cart</Link>
-            <button
+            <Link to="/cart" className={`mr-6 ${isDarkMode ? 'text-white' : 'text-white'}`}>Cart</Link>
+            {/*<button
               className="p-2 rounded-md text-white dark:text-white focus:outline-none"
               onClick={handleDarkModeToggle}
             >
@@ -27,7 +27,7 @@ function Header({ handleDarkModeToggle, isDarkMode }) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v.01M12 18v.01M4.93 4.93l.01-.01M19.07 19.07l-.01.01M6.83 17.17a6 6 0 1 1 8.49-8.49M17.17 6.83a6 6 0 1 1-8.49 8.49" />
                 </svg>
               )}
-            </button>
+            </button>*/}
           </div>
         </div>
       </div>
