@@ -1,33 +1,60 @@
 // Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
-function Header({ handleDarkModeToggle, isDarkMode }) {
+function Header({ handleDarkModeToggle, cartItems,
+darkMode, setDarkMode }) {
+
+  //const [isDarkMode, setDarkMode] = React.useState(false);
+
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+  };
+
   return (
-    <nav className={`sticky top-0  shadow-md shadow-slate-100 flex-shrink-0
-     ${isDarkMode ? 'bg-cyan-800' : 'bg-cyan-800'} 
-      dark:bg-slate-900  `}>
+    <nav className=" sticky top-0 z-100 bg-rose-700 shadow-md shadow-slate-100
+    bg-cyan-800  flex-shrink-0 text-white
+    shadow-sm dark:bg-slate-900 " >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className={`font-bold ${isDarkMode ? 'text-white' : 'text-white'}`}>My Ecommerce Site</Link>
+            <Link to="/" className=" font-bold" >My Ecommerce Site</Link>
           </div>
+
+          <div className=" w-8 h-8" >
+              < DarkModeSwitch
+                
+                checked={darkMode}
+                onChange={toggleDarkMode}
+                size={25}
+                sunColor="white"
+              
+              />
+          </div>
+
           <div className="flex items-center">
-            <Link to="/cart" className={`mr-6 ${isDarkMode ? 'text-white' : 'text-white'}`}>Cart</Link>
-            {/*<button
-              className="p-2 rounded-md text-white dark:text-white focus:outline-none"
-              onClick={handleDarkModeToggle}
-            >
-              {isDarkMode ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v.01M12 18v.01M4.93 4.93l.01-.01M19.07 19.07l-.01.01M6.83 17.17l.71-.71M17.17 6.83l-.71.71M1 12h2M21 12h2M12 1v2M12 21v2" />
+            <Link to="/cart" className=" mr-6 ">
+            <div className="inline-block" >
+              <div className="inline-block" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v.01M12 18v.01M4.93 4.93l.01-.01M19.07 19.07l-.01.01M6.83 17.17a6 6 0 1 1 8.49-8.49M17.17 6.83a6 6 0 1 1-8.49 8.49" />
-                </svg>
-              )}
-            </button>*/}
+              </div>
+              {
+                cartItems.length > 0 && (
+                  <span className="inline-block text-xs px-1 rounded-full 
+                  -mt-4 bg-red-600 -mr-4
+                  " >
+                    {cartItems.length}
+                  </span>
+                )
+              }
+
+            </div>
+            </Link>
+            
+            
           </div>
         </div>
       </div>

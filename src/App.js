@@ -64,8 +64,13 @@ function App() {
 
   return (
     <Router>
-      <div className={`min-h-screen h-full flex flex-col ${darkMode ? "bg-slate-700 text-white" : "bg-white text-gray-900"}`}>
-        <Header darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle} cartItems={cartItems} />
+      
+      <div className={`min-h-screen flex flex-col ${darkMode ? 
+        "dark" : ""}`}>
+        <Header darkMode={darkMode} handleDarkModeToggle={handleDarkModeToggle}
+         cartItems={cartItems} setDarkMode={setDarkMode} />
+        <div className="flex-grow dark:bg-slate-700 
+        dark:text-white px-2 md:px-4">
         <Routes>
           <Route index 
             element={
@@ -88,6 +93,7 @@ function App() {
             <Checkout cartItems={cartItems} cartTotal={cartTotal} />}
           />
         </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

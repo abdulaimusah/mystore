@@ -61,6 +61,11 @@ const CheckoutPage = ({ cartItems }) => {
   return (
     <div className="w-full md:w-1/2 mx-auto px-4 py-8">
   <h1 className="text-2xl font-bold mb-8">Checkout</h1>
+
+  <section className="flex flex-col md:flex-row md:gap-8
+  md:flex-row-reverse" >
+  
+  <div className="md:pt-12" >
   <Cards
     cvc={cvv}
     expiry={expiry}
@@ -69,7 +74,9 @@ const CheckoutPage = ({ cartItems }) => {
     number={cardNumber}
     preview
   />
-
+  </div>
+  
+  <div>
   <div className="mb-4 md:mb-2 ">
     <label
       htmlFor="cardHolder"
@@ -144,13 +151,16 @@ const CheckoutPage = ({ cartItems }) => {
     />
   </div>
 
-  <p className="mb-2">Card type: {getCardType(cardNumber)}</p>
+  {/*<p className="mb-2">Card type: {getCardType(cardNumber)}</p> */}
   <p className="mb-2">Total amount: ${totalAmount.toFixed(2)}</p>
-  <p className="mb-2">Total cartItems: {totalcartItems}</p>
+  {/*<p className="mb-2">Total cartItems: {totalcartItems}</p> */}
 
   <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
     Checkout
   </button>
+  </div>
+  </section>
+
   </div>
   );
 };

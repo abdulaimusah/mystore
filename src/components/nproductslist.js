@@ -39,10 +39,10 @@ const ProductList = ({ products }) => {
   });
 
   return (
-    <div className="flex flex-grow gap-6 mt-6 flex-wrap">
+    <div className="flex gap-6 mt-6 flex-wrap">
       <div className="flex flex-col px-4 md:h-3/5 py-4
-      md:sticky md:top-20" >
-      <div className="">
+      md:sticky md:top-20 md:z-10" >
+      <div className="text-black">
         <input
           type="text"
           placeholder="Search products..."
@@ -55,7 +55,10 @@ const ProductList = ({ products }) => {
         <select
           value={selectedCategory}
           onChange={handleCategoryChange}
-          className="w-full px-3 py-2 border rounded-md shadow-sm mb-4 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 py-2 border rounded-md shadow-sm 
+          dark:text-black
+          mb-4 placeholder-gray-500 focus:outline-none focus:ring-2 
+          focus:ring-blue-500 focus:border-transparent"
         >
           <option value="all">All categories</option>
           <option value="electronics">Electronics</option>
@@ -83,7 +86,7 @@ const ProductList = ({ products }) => {
       </div>
       </div>
       <div className="flex md:w-2/3 px-4 flex-wrap 
-      gap-6 justify-around " >
+      gap-6 justify-around items-center" >
       {filteredProducts.map((product) => (
         <Product key={product.id} product={product} />
       ))}
