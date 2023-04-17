@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Product from './product';
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, isLoggedIn }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [minPrice, setMinPrice] = useState('');
@@ -88,7 +88,8 @@ const ProductList = ({ products }) => {
       <div className="flex md:w-2/3 px-4 flex-wrap 
       gap-6 justify-around items-center" >
       {filteredProducts.map((product) => (
-        <Product key={product.id} product={product} />
+        <Product key={product._id} product={product}
+        isLoggedIn={isLoggedIn} />
       ))}
       </div>
     </div>

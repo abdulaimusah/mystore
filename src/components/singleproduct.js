@@ -4,8 +4,8 @@ import { useParams, Link } from 'react-router-dom';
 //import productsData from '../productsData';
 
 function SingleProduct({products, handleAddToCart}) {
-  const { id } = useParams();
-  const product = products.find((p) => p.id.toString() === id);
+  const { _id } = useParams();
+  const product = products.find((p) => p._id === _id);
   
   const addThisToCart = () => {
     handleAddToCart(product, 1)

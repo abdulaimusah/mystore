@@ -18,7 +18,7 @@ function CartPage({ cartItems, handleQuantityUpdate, handleRemoveItem }) {
         <>
           {cartItems.map((item) => (
             <CartItem
-              key={item.id}
+              key={item._id}
               item={item}
               handleQuantityUpdate={handleQuantityUpdate}
               handleRemoveItem={handleRemoveItem}
@@ -28,7 +28,7 @@ function CartPage({ cartItems, handleQuantityUpdate, handleRemoveItem }) {
           <div>
           <div className="flex justify-end items-center mt-8">
             <div className="text-xl font-bold mr-4">Total:</div>
-            <div className="text-xl font-bold">${totalPrice.toFixed(2)}</div>
+            <div className="text-xl font-bold">${totalPrice.toFixed(0)}</div>
           </div>
           <div className="flex  justify-between mx-4 mt-8">
             <div  >

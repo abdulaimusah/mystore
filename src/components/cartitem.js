@@ -2,11 +2,11 @@ import React from "react";
 
 function CartItem({ item, handleQuantityUpdate, handleRemoveItem }) {
   const handleQuantityChange = (e) => {
-    handleQuantityUpdate(item.id, e.target.value);
+    handleQuantityUpdate(item._id, e.target.value);
   };
 
   const handleRemoveClick = () => {
-    handleRemoveItem(item.id);
+    handleRemoveItem(item._id);
   };
 
   return (
@@ -14,13 +14,13 @@ function CartItem({ item, handleQuantityUpdate, handleRemoveItem }) {
       <img src={item.image} alt={item.name} className="w-16 h-16 mr-4" />
       <div>
         <h2 className="text-lg font-bold">{item.name}</h2>
-        <p className="text-gray-600">${item.price.toFixed(2)}</p>
+        <p className="text-gray-600">${item.price}</p>
         <div className="flex items-center mt-2">
-          <label htmlFor={`quantity-${item.id}`} className="mr-2">
+          <label htmlFor={`quantity-${item._id}`} className="mr-2">
             Quantity:
           </label>
           <select
-            id={`quantity-${item.id}`}
+            id={`quantity-${item._id}`}
             value={item.quantity}
             onChange={handleQuantityChange}
             className="w-16 rounded border-gray-400 border p-1"
