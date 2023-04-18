@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, 
+  Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import ProductsList from "./components/nproductslist";
@@ -20,6 +21,8 @@ function App() {
   const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+
+  
   
 
   const onLogin = () => {
@@ -87,6 +90,7 @@ function App() {
          isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <div className="flex-grow dark:bg-slate-700 
         dark:text-white px-2 md:px-4">
+          
         <Routes>
           <Route index 
             element={

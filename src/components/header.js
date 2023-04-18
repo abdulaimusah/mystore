@@ -1,6 +1,6 @@
 // Header.js
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useMatch, } from 'react-router-dom';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 function Header({ handleDarkModeToggle, cartItems,
@@ -19,12 +19,16 @@ darkMode, setDarkMode, isLoggedIn, setIsLoggedIn }) {
     navigate("/");
   }
 
+  //const location = useMatch();
+  //console.log(location);
+
   return (
-    <nav className={` sticky top-0 z-100 bg-rose-700 shadow-md
-     shadow-slate-100
+    <nav className={` sticky top-0 z-100 bg-rose-700 
     bg-cyan-800  flex-shrink-0 text-white
-    shadow-sm ${isLoggedIn && "bg-rose-600"} `} >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+     ${isLoggedIn && "bg-rose-600"} `} >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8
+      shadow-md
+      shadow-slate-100">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className=" font-bold" >{
@@ -32,13 +36,7 @@ darkMode, setDarkMode, isLoggedIn, setIsLoggedIn }) {
             }</Link>
           </div>
 
-          { !isLoggedIn && (
-            <div>
-              <Link to="/login" className="font-semibold">
-                Login/Signup as Admin
-              </Link>
-            </div>
-          ) }
+          
 
           <div className=" w-8 h-8" >
               < DarkModeSwitch
@@ -82,6 +80,17 @@ darkMode, setDarkMode, isLoggedIn, setIsLoggedIn }) {
           </div>
         </div>
       </div>
+      <div className='bg-white dark:bg-slate-700' >
+            {isLoggedIn ? (<button r className="inline-block
+            bg-indigo-700 tex-white px-4 py-1 rounded-lg sm:w-2/3
+            md:w-1/3 lg:w-1/4 my-1 ml-8" 
+            onClick={() => navigate("/addproduct")} >Add a product</button>) : (
+              <button className="inline-block
+              bg-indigo-700 tex-white px-4 py-1 rounded-lg sm:w-2/3
+              md:w-1/3 lg:w-1/4 my-1 ml-8" 
+              onClick={() => navigate("/login")} >Login/Signup as Admin</button>
+            )}
+          </div>
     </nav>
   );
 }

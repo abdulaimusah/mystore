@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, } from "react-router-dom";
 
 
 const CreateProductForm = ({isLoggedIn, 
@@ -10,7 +10,7 @@ toggleFetch, setToggleFetch}) => {
     name: "",
     price: "",
     description: "",
-    image: "",
+    image: "http://placeimg.com/640/480/cats",
     rating: "",
   });
 
@@ -113,6 +113,7 @@ toggleFetch, setToggleFetch}) => {
   <div className="mb-4">
     <label htmlFor="name" className="block mb-2 font-bold">Name:</label>
     <input
+      required="true"
       type="text"
       name="name"
       id="name"
@@ -125,6 +126,7 @@ toggleFetch, setToggleFetch}) => {
   <div className="mb-4">
     <label htmlFor="price" className="block mb-2 font-bold">Price:</label>
     <input
+      required="true"
       type="text"
       name="price"
       id="price"
@@ -137,6 +139,7 @@ toggleFetch, setToggleFetch}) => {
   <div className="mb-4">
     <label htmlFor="description" className="block mb-2 font-bold">Description:</label>
     <textarea
+      required="true"
       name="description"
       id="description"
       value={product.description}
@@ -146,8 +149,11 @@ toggleFetch, setToggleFetch}) => {
     />
   </div>
   <div className="mb-4">
-    <label htmlFor="image" className="block mb-2 font-bold">Image:</label>
+    <label htmlFor="image" className="block mb-2 font-bold">
+      Image URL: <span className="font-light" >read-only</span></label>
     <input
+      defaultValue={"http://placeimg.com/640/480/cats"}
+      readOnly="true"
       type="text"
       name="image"
       id="image"
@@ -160,6 +166,7 @@ toggleFetch, setToggleFetch}) => {
   <div className="mb-4">
     <label htmlFor="rating" className="block mb-2 font-bold">Rating:</label>
     <input
+      required="true"
       type="number"
       name="rating"
       id="rating"

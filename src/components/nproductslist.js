@@ -50,7 +50,7 @@ const ProductList = ({ products, isLoggedIn }) => {
           onChange={handleSearchChange}
           className="w-full px-3 py-2 border rounded-md shadow-sm mb-4 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
-      </div>
+      </div>{/*
       <div className="">
         <select
           value={selectedCategory}
@@ -65,7 +65,7 @@ const ProductList = ({ products, isLoggedIn }) => {
           <option value="clothing">Clothing</option>
           <option value="beauty">Beauty</option>
         </select>
-      </div>
+      </div> */}
       <div className="">
         <input
           type="number"
