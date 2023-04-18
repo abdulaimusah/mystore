@@ -63,7 +63,7 @@ const CheckoutPage = ({ cartItems }) => {
   <h1 className="text-2xl font-bold mb-8">Checkout</h1>
 
   <section className="flex flex-col md:flex-row md:gap-8
-  md:flex-row-reverse" >
+  md:flex-row-reverse dark:text-white" >
   
   <div className="md:pt-12" >
   <Cards
@@ -80,7 +80,7 @@ const CheckoutPage = ({ cartItems }) => {
   <div className="mb-4 md:mb-2 ">
     <label
       htmlFor="cardHolder"
-      className="block text-gray-700 font-bold mb-2"
+      className="block text-gray-700 font-bold mb-2 dark:text-white"
     >
       Card Holder Name
     </label>
@@ -93,14 +93,15 @@ const CheckoutPage = ({ cartItems }) => {
       onFocus={(e) => setFocus(e.target.name)}
       onBlur={() => setFocus('')}
       placeholder="Card Holder Name"
-      className="w-full px-3 py-2 rounded border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
+      className="w-full px-3 py-2 rounded dark:bg-slate-500
+      border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
     />
   </div>
 
   <div className="mb-4 md:mb-2">
     <label
       htmlFor="cardNumber"
-      className="block text-gray-700 font-bold mb-2"
+      className="block text-gray-700 font-bold mb-2 dark:text-white"
     >
       Card Number
     </label>
@@ -112,12 +113,14 @@ const CheckoutPage = ({ cartItems }) => {
       onChange={handleCardNumberChange}
       onFocus={(e) => setFocus(e.target.name)}
       onBlur={() => setFocus('')}
-      className="w-full px-3 py-2 rounded border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
+      className="w-full px-3 py-2 rounded dark:bg-slate-500
+      border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
     />
   </div>
 
   <div className="mb-4 md:mb-2">
-    <label htmlFor="expiry" className="block text-gray-700 font-bold mb-2">
+    <label htmlFor="expiry" className="block text-gray-700 dark:text-white
+    font-bold mb-2">
       Expiry
     </label>
     <input
@@ -131,12 +134,14 @@ const CheckoutPage = ({ cartItems }) => {
       onFocus={(e) => setFocus(e.target.name)}
       onBlur={() => setFocus('')}
       onKeyDown={handleExpiryDateKeyDown}
-      className="w-full px-3 py-2 rounded border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
+      className="w-full px-3 py-2 rounded dark:bg-slate-500
+      border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
     />
   </div>
 
   <div className="mb-4 md:mb-2">
-    <label htmlFor="cvv" className="block text-gray-700 font-bold mb-2">
+    <label htmlFor="cvv" className="block text-gray-700 dark:text-white
+    font-bold mb-2">
       CVV
     </label>
     <input
@@ -147,12 +152,13 @@ const CheckoutPage = ({ cartItems }) => {
       onChange={(e) => setCvv(e.target.value)}
       onFocus={(e) => setFocus(e.target.name)}
       onBlur={() => setFocus('')}
-      className="w-full px-3 py-2 rounded border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
+      className="w-full px-3 py-2 rounded dark:bg-slate-500
+      border-2 focus:border-green-400 transition-all duration-300 hover:border-green-400"
     />
   </div>
 
   {/*<p className="mb-2">Card type: {getCardType(cardNumber)}</p> */}
-  <p className="mb-2">Total amount: ${totalAmount.toFixed(2)}</p>
+  <p className="mb-2">Total amount: ${parseFloat(totalAmount).toFixed(2)}</p>
   {/*<p className="mb-2">Total cartItems: {totalcartItems}</p> */}
 
   <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
