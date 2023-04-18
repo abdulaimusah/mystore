@@ -34,7 +34,7 @@ function App() {
     const fetchProducts = async () => {
       const response = await fetch("https://mystore-backend-1xri.onrender.com/products");
       const data = await response.json();
-      setProducts(data);
+      setProducts(data.reverse());
     };
 
     fetchProducts();

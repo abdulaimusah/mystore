@@ -10,7 +10,7 @@ toggleFetch, setToggleFetch}) => {
     name: "",
     price: "",
     description: "",
-    image: "http://placeimg.com/640/480/cats",
+    image: "/theimage.webp",
     rating: "",
   });
 
@@ -152,7 +152,7 @@ toggleFetch, setToggleFetch}) => {
     <label htmlFor="image" className="block mb-2 font-bold">
       Image URL: <span className="font-light" >read-only</span></label>
     <input
-      defaultValue={"http://placeimg.com/640/480/cats"}
+      defaultValue={"/theimage.webp"}
       readOnly="true"
       type="text"
       name="image"
