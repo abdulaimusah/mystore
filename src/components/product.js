@@ -18,7 +18,7 @@ const Product = ({ product, isLoggedIn }) => {
     dark:bg-slate-800
     shadow-lg shadow-slate-600 my-4">
       <img
-        className=" h-48 w-auto rounded-md "
+        className=" h-48 w-52 rounded-md object-cover"
         src={product.image}
         alt={product.name}
       />
