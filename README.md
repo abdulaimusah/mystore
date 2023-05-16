@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+Full Stack Ecommerce Store
+This is a full stack ecommerce store built with ReactJS, TailwindCSS, ExpressJS, and NodeJS. In this project, you can visit the website as a user or admin by signing up and logging in.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+As a User
+As a user, you have access to the following features:
 
-## Available Scripts
+Dark/Light mode: You can toggle between dark and light mode for a personalized viewing experience.
+Product View: You can view products on the website.
+Add to Cart: You can add products to your cart.
+Cart Page: You can view the items in your cart and edit product quantity or remove products from your cart.
+Checkout Page: You can proceed to the checkout page to enter your credit card information and view your card information.
 
-In the project directory, you can run:
 
-### `npm start`
+As an Admin
+After signing up or loggin in, you have access to the following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Admin Home: You can sign up or log in to access the admin home.
+Add Products: You can add new products to the store.
+Edit Products: You can edit existing products in the store.
+Delete Products: You can delete products from the store.
+Dark/Light mode: You can toggle between dark and light mode for a personalized viewing experience.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Admin Login
+To login as an admin, click the "Admin" button in the navbar and enter the following credentials:
 
-### `npm run build`
+Username: test
+Password: Example@1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: You can sign up as well
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend Repository
+The backend repository for this project can be found at https://github.com/abdulaimusah/mystore-backend .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project URL
+The live project can be found at https://mystore-5y1b.onrender.com/
