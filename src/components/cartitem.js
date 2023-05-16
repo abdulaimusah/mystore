@@ -14,8 +14,8 @@ function CartItem({ item, handleQuantityUpdate, handleRemoveItem }) {
       <img src={item.image} alt={item.name} className="w-16 h-16 mr-4" />
       <div>
         <h2 className="text-lg font-bold">{item.name}</h2>
-        <p className="text-gray-600">${item.price}</p>
-        <div className="flex items-center mt-2">
+        <p className="text-gray-600 dark:text-white">${item.price}</p>
+        <div className="flex items-center mt-2 dark:text-white">
           <label htmlFor={`quantity-${item._id}`} className="mr-2">
             Quantity:
           </label>
@@ -23,7 +23,8 @@ function CartItem({ item, handleQuantityUpdate, handleRemoveItem }) {
             id={`quantity-${item._id}`}
             value={item.quantity}
             onChange={handleQuantityChange}
-            className="w-16 rounded border-gray-400 border p-1"
+            className="w-16 rounded border-gray-400 border p-1
+            dark:bg-gray-600"
           >
             {[...Array(10)].map((_, i) => (
               <option key={i} value={i + 1}>

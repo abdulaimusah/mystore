@@ -65,13 +65,15 @@ const SignUpPage = () => {
     <h2 className="text-3xl font-bold mb-4">Sign Up</h2>
     {error && <p className="text-red-500 mb-4">{error}</p>}
     <div className="mb-4">
-      <label className="block text-gray-700 font-bold mb-2" htmlFor="username">
+      <label className="block text-gray-700 font-bold mb-2
+      dark:text-white" htmlFor="username">
         Username:
       </label>
       <input
         className="appearance-none border dark:bg-slate-600
-        rounded w-full py-2 px-3 text-gray-700 leading-tight 
-        focus:outline-none focus:shadow-outline"
+        rounded w-full py-2 px-3 text-gray-700 leading-tigt
+        focus:outline-none focus:shadow-outline 
+        dark:text-white "
         type="text"
         name="username"
         value={username}
@@ -79,11 +81,14 @@ const SignUpPage = () => {
       />
     </div>
     <div className="mb-4">
-      <label className="block text-gray-700 font-bold mb-2" htmlFor="password">
+      <label className="block text-gray-700 font-bold mb-2 
+      dark:text-white" htmlFor="password">
         Password:
       </label>
       <input
-        className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="appearance-none border rounded w-full py-2 px-3 
+        text-gray-700 leading-tight focus:outline-none 
+        focus:shadow-outline dark:bg-slate-600 dark:text-white"
         type="password"
         name="password"
         value={password}
@@ -91,11 +96,14 @@ const SignUpPage = () => {
       />
     </div>
     <div className="mb-4">
-      <label className="block text-gray-700 font-bold mb-2" htmlFor="confirm-password">
+      <label className="block text-gray-700 font-bold mb-2 
+      dark:text-white" htmlFor="confirm-password">
         Confirm Password:
       </label>
       <input
-        className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="appearance-none border rounded w-full py-2 px-3 
+        text-gray-700 leading-tight focus:outline-none focus:shadow-outline
+        dark:bg-slate-600 dark:text-white"
         type="password"
         name="confirm-password"
         value={confirmPassword}

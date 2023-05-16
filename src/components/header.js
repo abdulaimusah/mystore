@@ -23,16 +23,17 @@ darkMode, setDarkMode, isLoggedIn, setIsLoggedIn }) {
   //console.log(location);
 
   return (
-    <nav className={` sticky top-0 z-100 bg-rose-700 
+    <nav className={` sticky top-0 z-50 bg-rose-700 
     bg-cyan-800  flex-shrink-0 text-white
-     ${isLoggedIn && "bg-rose-600"} `} >
+     ${isLoggedIn && "bg-rose-600"} 
+     shadow-md shadow-slate-300 `} >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8
       shadow-md
       shadow-slate-100">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className=" font-bold" >{
-              isLoggedIn ? "Admin" : "Shop"
+              isLoggedIn ? "Admin Home" : "User Home"
             }</Link>
           </div>
 
