@@ -43,8 +43,8 @@ After signing up or loggin in, you have access to the following features:<br>
 ## Admin Login
 To login as an admin, click the "Login" button in the navbar and enter the following credentials:<br>
 
-**Username: test@email.com**<br>
-**Password: Example@1**<br>
+Username: **test@email.com**<br>
+Password: **Example@1**<br>
 
 *Note:* You can sign up as well<br>
 
