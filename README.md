@@ -12,12 +12,12 @@ Passwords are securely hashed before being inserted into the database. This ensu
 ## Email and Password Validation
 During the signup process, email and password validation has been implemented to ensure data integrity and security. The following requirements are enforced:<br>
 
-**Email validation:** The entered email address must be valid.
+**Email validation:** The entered email address must be valid.<br>
 **Password validation:** The entered password must meet the following criteria:<br>
-Minimum length of eight characters.<br>
-Must contain at least one number.<br>
-Must contain at least one special character.<br>
-Must contain at least one uppercase letter.<br>
+ - Minimum length of eight characters.<br>
+ - Must contain at least one number.<br>
+ - Must contain at least one special character.<br>
+ - Must contain at least one uppercase letter.<br>
 
 ## *As a User*
 As a user, you have access to the following features:
